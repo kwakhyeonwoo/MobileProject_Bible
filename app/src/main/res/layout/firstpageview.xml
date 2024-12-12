@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+
+        <!-- 프로필 이미지 -->
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="180dp"
+            android:layout_height="230dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/newimage1"
+            android:scaleType="centerCrop" />
+
+        <!-- 색상 변경 버튼 -->
+        <Button
+            android:id="@+id/btnChangeColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="색상 변경"
+            android:layout_marginBottom="6dp" />
+
+        <!-- 닉네임 -->
+        <EditText
+            android:id="@+id/editNickName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="닉네임"
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 성별 선택 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="남성"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여성"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- 키 -->
+        <EditText
+            android:id="@+id/editHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="키"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 몸무게 -->
+        <EditText
+            android:id="@+id/editWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="몸무게"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp" />
+     
+        <!-- 나이 -->
+        <EditText
+            android:id="@+id/editAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="나이"
+            android:inputType="number"
+            android:layout_marginBottom="32dp" />
+
+        <!-- 생성 버튼 -->
+        <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="생성"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</ScrollView>

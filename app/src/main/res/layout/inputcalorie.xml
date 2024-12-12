@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 현재 칼로리 텍스트 -->
+    <TextView
+        android:id="@+id/currentCalorieText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="현재 칼로리: 0"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp" />
+
+    <!-- 음식 추가 버튼 -->
+    <Button
+        android:id="@+id/addFoodButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="음식 추가"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white" />
+
+    <!-- 소모 칼로리 버튼 -->
+    <Button
+        android:id="@+id/burnCalorieButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="소모 칼로리"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white" />
+
+    <!-- 입력 레이아웃 -->
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/foodNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="음식 이름" />
+
+        <EditText
+            android:id="@+id/calorieInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="칼로리 입력"
+            android:inputType="number" />
+    </LinearLayout>
+
+</LinearLayout>

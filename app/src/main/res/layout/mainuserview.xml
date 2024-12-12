@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+<!--    &lt;!&ndash; Title Image &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/titleImageView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="16dp"-->
+<!--        />-->
+
+    <!-- Character Image -->
+    <ImageView
+        android:id="@+id/characterImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/newimage1"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+         />
+
+
+    <!-- Today's Calorie Input -->
+    <EditText
+        android:id="@+id/todayCalorieEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="오늘의 칼로리 입력"
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        android:layout_marginBottom="30dp"
+        android:layout_margin="16dp"/>
+
+    <!-- Current Calorie Text -->
+    <TextView
+        android:id="@+id/currentCalorieText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="현재 칼로리: 0"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_margin="16dp"/>
+
+    <!-- Suggest Calorie Button -->
+    <Button
+        android:id="@+id/suggestCalorieButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="나의 권장 칼로리 확인하기"
+        android:layout_marginTop="16dp"
+        android:layout_margin="16dp"/>
+
+    <!-- My Info Button -->
+    <Button
+        android:id="@+id/myInfoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="내 정보 확인하기"
+        android:layout_margin="16dp"/>
+
+</LinearLayout>
