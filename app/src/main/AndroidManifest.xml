@@ -24,6 +24,7 @@
         <activity android:name=".firstPageView" />
         <activity android:name=".MainUserView" />
         <activity android:name=".InputCalorie" />
+        <activity android:name=".UserSetting" />
     </application>
 
 </manifest>

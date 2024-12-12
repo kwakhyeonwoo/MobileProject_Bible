@@ -16,6 +16,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class MainUserView extends AppCompatActivity {
 
     private EditText todayCalorieEditText;
@@ -24,18 +26,45 @@ public class MainUserView extends AppCompatActivity {
     private ImageView characterImageView; // 수정된 부분: characterImageView로 이미지 설정
     private UserModel userModel;
     private int nowCalorie = 0;
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainuserview);
 
+        // BottomNavigationView 참조
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        // 메뉴 아이템 클릭 이벤트 처리
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.nav_home:
+                    // 홈 화면 동작
+
+                    return true;
+
+                case R.id.nav_search:
+                    // 검색 화면 동작
+
+                    return true;
+
+                case R.id.nav_profile:
+                    // 프로필 화면 동작
+                    Intent intent =new Intent(MainUserView.this, UserSetting.class);
+                    startActivity(intent);
+                    finish();
+
+                    return true;
+
+                default:
+                    return false;
+            }
+        });
+
         // Intent로 전달된 Bitmap 받기
         Intent intent = getIntent();
         Bitmap imageBitmap = (Bitmap) intent.getParcelableExtra("imageBitmap");
-
-//        nowCalorie = getIntent().getIntExtra("currentCalorie", 0);
-//        currentCalorieTextView.setText("현재 칼로리" + nowCalorie);
 
         // 이미지뷰에 Bitmap 설정
         characterImageView = findViewById(R.id.characterImageView);
@@ -141,4 +170,5 @@ public class MainUserView extends AppCompatActivity {
         }
         return super.dispatchTouchEvent(ev);
     }
+
 }
